@@ -1,0 +1,51 @@
+// :root {
+//   --color-background: #fff;
+//   --color-dropdown: #fefefe;
+//   --color-primary: #5355ff;
+//   --menu-width-opened: 19rem;
+//   --menu-width-closed: 6.571em;
+//   --menu-border-color: rgb(190, 190, 190);
+//   --effect-image: url("@/assets/effect.png");
+//   --login-image: url("@/assets/login-bg.webp");
+//   --color-input-border: 1px solid transparent;
+//   --color-input: rgba(0, 0, 0, 0.05);
+//   --color-card: rgba(0, 0, 0, 0.05);
+//   --color-icon-btn: rgba(255, 255, 255, 0.05);
+//   --color-hover: rgba(255, 255, 255, 0.07);
+//   --color-hover-darken: rgba(255, 255, 255, 0.09);
+//   --color-head: #fff;
+//   --color-white: #000;
+//   --color-text: #333;
+//   --surface-800: var(--color-text);
+//   --color-code-bg: #e4e4e4;
+//   --color-deleted: #8b8a8b;
+//   --color-dialog: #252636;
+//   --color-success: #0c7040;
+//   --color-warning: #fc8621;
+//   --color-error: #c72c41;
+// }
+
+:root {
+  --color-background: #000;
+  --color-dropdown: #000031;
+  --color-primary: #5355ff;
+  --menu-width-opened: 22rem;
+  --menu-width-closed: 6.571em;
+  --menu-border-color: #070238;
+  --effect-image: url("@/assets/effect.png");
+  --login-image: url("@/assets/login-bg.webp");
+  --color-input-border: 1px solid transparent;
+  --color-input: rgba(255, 255, 255, 0.05);
+  --color-card: rgba(255, 255, 255, 0.09);
+  --color-icon-btn: rgba(255, 255, 255, 0.05);
+  --color-hover: rgba(255, 255, 255, 0.07);
+  --color-hover-darken: rgba(255, 255, 255, 0.09);
+  --color-head: #fff;
+  --color-white: #fff;
+  --color-text: #868c9b;
+  --color-deleted: #8b8a8b;
+  --color-dialog: #252636;
+  --color-success: #0c7040;
+  --color-warning: #fc8621;
+  --color-error: #c72c41;
+}

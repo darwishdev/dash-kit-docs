@@ -1,0 +1,76 @@
+.doc-main {
+  padding: 0 20px;
+  @media (min-width: 1200px) {
+    max-width: 60vw;
+  }
+}
+.full-img img {
+  width: 100%;
+}
+pre {
+  overflow: scroll;
+}
+.doc-section-nav {
+  display: none;
+  @media (min-width: 1200px) {
+    display: block;
+  }
+  position: fixed !important;
+}
+
+h1,
+h2 {
+  font-size: 2rem;
+  margin: 50px 0 20px 0;
+}
+li {
+  color: var(--surface-800);
+  font-size: 18px;
+  margin: 20px 10px;
+  // list-style: none;
+}
+
+strong,
+h1,
+h2 {
+  font-weight: 600;
+}
+
+p {
+  font-size: 1.125rem;
+  color: var(--surface-800);
+}
+.layout-wrapper {
+  &:not(.layout-sidebar-active) {
+    & .icon-logo {
+      display: flex !important;
+    }
+  }
+
+  &.layout-sidebar-active {
+    & .all-logo {
+      display: flex !important;
+    }
+  }
+  & aside.desktop-menu:hover {
+    & .icon-logo {
+      display: none !important;
+    }
+    & .all-logo {
+      display: flex !important;
+    }
+  }
+}
+
+.p-panelmenu-header.p-highlight {
+  background-color: var(--color-card);
+  border-radius: 6px 6px 0 0;
+  padding-top: 10px;
+}
+
+.p-submenu-icon {
+  order: 2;
+}
+.p-menuitem-text {
+  flex: 1;
+}
