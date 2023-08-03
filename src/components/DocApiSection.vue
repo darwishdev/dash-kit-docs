@@ -38,6 +38,8 @@ export default {
 
             for (const docName of this.doc) {
                 const moduleName = docName.toLowerCase();
+                console.log(moduleName)
+                console.log(APIDocs)
                 const regex = /\[Live Demo][\s\S]*/g;
 
                 let newDoc = {

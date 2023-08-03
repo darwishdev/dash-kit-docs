@@ -5,16 +5,21 @@
          thereby streamlining the form creation process. The Form Create component is a powerful tool that significantly enhances the
           form creation process, providing developers with a highly functional and customizable solution
            for generating forms with ease." :componentDocs="docs"
-         :ptTabComponent="ptComponent" />
+           :apiDocs="['form']" />
 </template>
 
 <script>
+import Toast from 'primevue/toast';
+
 import BasicDoc from '@/doc/forms/FormCreate/BasicDoc.vue';
 import withToastDoc from '@/doc/forms/FormCreate/withToastDoc.vue';
 import ErrorHandler from '@/doc/forms/FormCreate/ErrorHandler.vue';
 import CustomInputs from '../../doc/forms/FormCreate/CustomInputs.vue';
 
 export default {
+    components:{
+        Toast
+    },
     data() {
         return {
             docs: [

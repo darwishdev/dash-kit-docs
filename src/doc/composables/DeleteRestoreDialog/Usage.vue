@@ -2,8 +2,9 @@
 import { DeleteRestoreHandler, DialogDeleteRestoreParms } from 'dash-kit/types'
 import type { RoleDeleteRestoreRequest } from '@/api/ApiTypes'
 import apiClient from '@/api/ApiMock';
-// import { useDialog } from 'primevue/usedialog';
+import { useDialog } from 'primevue/usedialog';
 import { useDialogDeleteRestore } from 'dash-kit/composables';
+const dialog = useDialog()
 const code: any = {
     basic: `
 <script setup lang="ts">
@@ -41,6 +42,7 @@ const deleteRestoreDialogParm: DialogDeleteRestoreParms = {
     onConfirmed: () => {
         console.log('role deleted successfully');
     },
+    dialog,
     deleteRestoreHandler: deleteRestoreHandler,
     recordId: 1,
 }

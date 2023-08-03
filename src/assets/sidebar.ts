@@ -13,8 +13,8 @@ export default [
             {
                 key: "2.0", label: "Forms", icon: "pi pi-fw pi-file", to: null,
                 items: [
-                    { key: "2.0.0", label: "Input Permissions", icon: "pi pi-fw pi-users", to: "/input-permissions" },
-                    { key: "2.0.1", label: "Input File", icon: "pi pi-fw pi-file", to: "/input-file" },
+                    { key: "2.0.0", label: "Input Permissions", icon: "pi pi-fw pi-users", to: "/forms/input-permissions" },
+                    { key: "2.0.1", label: "Input File", icon: "pi pi-fw pi-file", to: "/forms/input-file" },
                     { key: "2.0.2", label: "Form Create", icon: "pi pi-fw pi-plus", to: "/forms/form-create" },
                     { key: "2.0.3", label: "Form Update", icon: "pi pi-fw pi-pencil", to: "/forms/form-update" },
                     { key: "2.0.4", label: "Form Filter", icon: "pi pi-fw pi-filter", to: "/forms/form-filter" },
@@ -26,11 +26,11 @@ export default [
                 key: "2.1", label: "Base", icon: "pi pi-fw pi-clone", to: null,
                 items: [
                     { key: "2.1.0", label: "App Layout", icon: "pi pi-fw pi-th-large", to: "/base/app-layout" },
-                    { key: "2.1.1", label: "App Nav", icon: "pi pi-fw pi-bars", to: "/app-nav" },
-                    { key: "2.1.2", label: "App Menu", icon: "pi pi-fw pi-bars", to: "/app-menu" },
-                    { key: "2.1.3", label: "App Card", icon: "pi pi-fw pi-id-card", to: "/app-card" },
-                    { key: "2.1.4", label: "App CRUD", icon: "pi pi-fw pi-table", to: "/app-crud" },
-                    { key: "2.1.5", label: "Icon Btn", icon: "pi pi-fw pi-image", to: "/icon-btn" },
+                    { key: "2.1.1", label: "App Nav", icon: "pi pi-fw pi-bars", to: "/base/app-nav" },
+                    { key: "2.1.2", label: "App Menu", icon: "pi pi-fw pi-bars", to: "/base/app-menu" },
+                    { key: "2.1.3", label: "App Card", icon: "pi pi-fw pi-id-card", to: "/base/app-card" },
+                    { key: "2.1.4", label: "App CRUD", icon: "pi pi-fw pi-table", to: "/base/app-crud" },
+                    { key: "2.1.5", label: "Icon Btn", icon: "pi pi-fw pi-image", to: "/base/icon-btn" },
                 ]
             },
         ]
@@ -48,15 +48,15 @@ export default [
     {
         key: "4", label: "Helpers", icon: "pi pi-fw pi-question-circle", to: null,
         items: [
-            { key: "4.0", label: "FormFactory", icon: "pi pi-fw pi-cogs", to: "/form-factory" },
-            { key: "4.1", label: "Filter", icon: "pi pi-fw pi-filter", to: "/filter" },
-            { key: "4.2", label: "handleSuccessToast", icon: "pi pi-fw pi-check-circle", to: "/handle-success-toast" },
-            { key: "4.3", label: "getRouteVariation", icon: "pi pi-fw pi-route", to: "/get-route-variation" },
-            { key: "4.4", label: "parseDate", icon: "pi pi-fw pi-calendar", to: "/parse-date" },
-            { key: "4.5", label: "Can", icon: "pi pi-fw pi-key", to: "/can" },
-            { key: "4.6", label: "authMiddleware", icon: "pi pi-fw pi-user-check", to: "/auth-middleware" },
-            { key: "4.7", label: "ExportCSV", icon: "pi pi-fw pi-upload", to: "/export-csv" },
-            { key: "4.8", label: "ParseFile", icon: "pi pi-fw pi-download", to: "/parse-file" },
+            { key: "4.0", label: "FormFactory", icon: "pi pi-fw pi-cogs", to: "/helpers/form-factory" },
+            { key: "4.1", label: "Filter", icon: "pi pi-fw pi-filter", to: "/helpers/filter" },
+            { key: "4.2", label: "handleSuccessToast", icon: "pi pi-fw pi-check-circle", to: "/helpers/handle-success-toast" },
+            { key: "4.3", label: "getRouteVariation", icon: "pi pi-fw pi-route", to: "/helpers/get-route-variation" },
+            { key: "4.4", label: "parseDate", icon: "pi pi-fw pi-calendar", to: "/helpers/parse-date" },
+            { key: "4.5", label: "Can", icon: "pi pi-fw pi-key", to: "/helpers/can" },
+            { key: "4.6", label: "authMiddleware", icon: "pi pi-fw pi-user-check", to: "/helpers/auth-middleware" },
+            { key: "4.7", label: "ExportCSV", icon: "pi pi-fw pi-upload", to: "/helpers/export-csv" },
+            { key: "4.8", label: "ParseFile", icon: "pi pi-fw pi-download", to: "/helpers/parse-file" },
         ]
     },
     { key: "5", label: "Contribution", icon: "pi pi-fw pi-external-link", to: "/contribution" },

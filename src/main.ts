@@ -7,8 +7,12 @@ import DashKit from 'dash-kit'
 import * as components from "@/components"
 import dashkitConfig from '@/plugins/dashkit.config'
 
+import ToastService from 'primevue/toastservice';
+import DialogService from 'primevue/dialogservice';
 const app = createApp(App)
 app.use(router).use(DashKit, dashkitConfig)
+.use(ToastService)
+.use(DialogService)
 Object.keys(components).forEach((key: string) => {
     app.component(key, components[key as keyof typeof components])
 });
@@ -25,4 +29,5 @@ const LogoIconComponent = defineComponent({
 })
 app.component("Logo", LogoComponent)
 app.component("LogoIcon", LogoIconComponent)
+
 app.mount('#app')

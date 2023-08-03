@@ -1,16 +1,6 @@
-import { createRouter, createWebHistory } from 'vue-router'
-// import AppLayout from '@/components/AppLayout.vue'
-// import { AppLayout } from 'dash-kit/base'
-import AppLayout from '@/layouts/AppLayout.vue'
-import IntroductionView from '@/views/getting_started/IntroductionView.vue'
-import InstallationView from '@/views/getting_started/InstallationView.vue'
-import ConfigurationView from '@/views/getting_started/ConfigurationView.vue'
-import AppLayoutView from '@/views/base/AppLayoutView.vue'
-import formCreate from '@/views/forms/formCreate.vue'
-import formLoading from '@/views/forms/FormLoading.vue'
-import FormUpdate from '@/views/forms/FormUpdate.vue'
-import FormError from '@/views/forms/FormError.vue'
-import FormFilter from '@/views/forms/FormFilter.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import AppLayout from '@/layouts/AppLayout.vue';
+
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
@@ -18,62 +8,145 @@ const router = createRouter({
             path: '/',
             component: AppLayout,
             children: [
-                //getting started
+                // Getting Started
                 {
                     path: '/getting-started/introduction',
                     name: "home_view",
-                    component: IntroductionView
+                    component:import('@/views/getting_started/IntroductionView.vue')
                 },
                 {
                     path: '/getting-started/installation',
-                    component: InstallationView
+                    component:import('@/views/getting_started/InstallationView.vue')
                 },
                 {
                     path: '/getting-started/configuration',
-                    component: ConfigurationView
+                    component:import('@/views/getting_started/ConfigurationView.vue')
                 },
-
-                //compoonents - base
+                // form routes...
                 {
-                    path: '/base/app-layout',
-                    component: AppLayoutView
-                },
-                {
-                    path: '/forms/formCreate',
-                    component: formCreate
+                    path: '/forms/input-permissions',
+                    component:  () => import('@/views/forms/InputPermissionsView.vue'),
                 },
                 {
-                    path: '/forms/form-loading',
-                    component: formLoading
+                    path: '/forms/input-file',
+                    component:  () => import('@/views/forms/InputFileUploadView.vue'),
+                },
+                {
+                    path: '/forms/form-create',
+                    component:  () => import('@/views/forms/FormCreateView.vue'),
                 },
                 {
                     path: '/forms/form-update',
-                    component: FormUpdate
-                },
-                {
-                    path: '/forms/form-error',
-                    component: FormError
+                    component:  () => import('@/views/forms/FormUpdateView.vue'),
                 },
                 {
                     path: '/forms/form-filter',
-                    component: FormFilter
+                    component:  () => import('@/views/forms/FormFilterView.vue'),
                 },
-                // {
-                //     path: '/composables/data-fetcher-list',
-                //     component: DataFetcherList
-                // },
-                // {
-                //     path: '/composables/data-fetcher-find',
-                //     component: DataFetcherFind
-                // },
-                // {
-                //     path: '/composables/delete-restore-dialog',
-                //     component: DeleteRestoreDialog
-                // },
-            ]
-        }
-    ]
-})
+                {
+                    path: '/forms/form-loading',
+                    component:  () => import('@/views/forms/FormLoadingView.vue'),
+                },
+                {
+                    path: '/forms/form-error',
+                    component:  () => import('@/views/forms/FormErrorView.vue'),
+                },
+                // Components - Base
+                {
+                    path: '/base/app-layout',
+                    component: import('@/views/base/AppLayoutView.vue')
+                },
+                {
+                    path: '/base/app-nav',
+                    component: import('@/views/base/AppNavView.vue')
+                },
+                {
+                    path: '/base/app-menu',
+                    component: import('@/views/base/AppMenuView.vue')
+                },
+                {
+                    path: '/base/app-card',
+                    component: import('@/views/base/AppCardView.vue')
+                },
+                {
+                    path: '/base/app-crud',
+                    component: import('@/views/base/AppCrudView.vue')
+                },
+                {
+                    path: '/base/icon-btn',
+                    component: import('@/views/base/AppIconBtnView.vue')
+                },
 
-router.push('/getting-started/introduction')
-export default router
+                // Composables
+                {
+                    path: '/composables/data-fetcher-list',
+                    component: () => import('@/views/composables/DataFetcherListView.vue')
+                },
+                {
+                    path: '/composables/data-fetcher-find',
+                    component: () => import('@/views/composables/DataFetcherFindView.vue')
+                },
+                {
+                    path: '/composables/delete-restore-dialog',
+                    component: () => import('@/views/composables/DialogDeleteRestoreView.vue')
+                },
+                {
+                    path: '/composables/dialog-update',
+                    component: () => import('@/views/composables/DialogUpdateView.vue')
+                },
+                {
+                    path: '/composables/dialog-create',
+                    component: () => import('@/views/composables/DialogCreateView.vue')
+                },
+
+                // Helpers
+                {
+                    path: '/helpers/form-factory',
+                    component: () => import('@/views/helpers/FormFactoryView.vue')
+                },
+                {
+                    path: '/helpers/filter',
+                    component: () => import('@/views/helpers/FilterView.vue')
+                },
+                {
+                    path: '/helpers/handle-success-toast',
+                    component: () => import('@/views/helpers/HandleSuccessToastView.vue')
+                },
+                {
+                    path: '/helpers/get-route-variation',
+                    component: () => import('@/views/helpers/GetRouteVariationView.vue')
+                },
+                {
+                    path: '/helpers/parse-date',
+                    component: () => import('@/views/helpers/ParseDateView.vue')
+                },
+                {
+                    path: '/helpers/can',
+                    component: () => import('@/views/helpers/CanView.vue')
+                },
+                {
+                    path: '/helpers/auth-middleware',
+                    component: () => import('@/views/helpers/AuthMiddlewareView.vue')
+                },
+                {
+                    path: '/helpers/export-csv',
+                    component: () => import('@/views/helpers/ExportCSVView.vue')
+                },
+                {
+                    path: '/helpers/parse-file',
+                    component: () => import('@/views/helpers/ParseFileView.vue')
+                },
+            ]
+        },
+        // Add more top-level routes here if needed...
+        { 
+            path: '/contribution',
+            name: 'contribution_view',
+            component: () => import('@/views/ContributionView.vue')
+        },
+    ]
+});
+
+router.push('/getting-started/introduction');
+
+export default router;

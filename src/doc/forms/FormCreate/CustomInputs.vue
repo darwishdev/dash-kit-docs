@@ -2,7 +2,6 @@
 import type { FormOptions, SubmitHandler,FormSeciton } from 'dash-kit/types'
 import type { RoleCreateRequest , RoleCreateResponse } from '@/api/ApiTypes'
 import apiClient from '@/api/ApiMock';
-
 const code : any = {
     basic : `
 <script setup lang="ts">
@@ -121,11 +120,12 @@ const submitHandler: SubmitHandler<RoleCreateRequest, RoleCreateRequest, RoleCre
 
 </script>
 <template>
+
     <DocSectionText v-bind="$attrs">
         <p>Try using CreateForm component using permissions custom input</p>
     </DocSectionText>
     <div>
-        <form-create :sections="sectionsss" :submitHandler="submitHandler" :options="options" />
+        <form-create  :sections="sectionsss" :submitHandler="submitHandler" :options="options" />
     </div>
     <DocSectionCode :code="code" />
     <h1>Notes : </h1>
