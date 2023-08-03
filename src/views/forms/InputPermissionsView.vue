@@ -1,41 +1,25 @@
 <template>
-    <DocComponent title="Form Create component" header="Form Create" description="The Form Create component is a crucial element of the Dash-Kit package, 
-        as it facilitates the generation of comprehensive forms with all the necessary specifications,
-         thereby streamlining the form creation process. The Form Create component is a powerful tool that significantly enhances the
-          form creation process, providing developers with a highly functional and customizable solution
-           for generating forms with ease." :componentDocs="docs" :ptTabComponent="ptComponent" />
+    <DocComponent title="Input Permissions" header="Input Permissions" description="The Permissions Custom Input Component serves as a comprehensive 
+    and ready-to-use input component, meticulously crafted to display a list of available permissions derived from your API client's 
+    permissions list function. By leveraging this component, you can effortlessly assign and configure specific permissions for individual 
+    users or roles during the creation process. The primary functionality of the Permissions Custom Input Component revolves around its intuitive
+     switch toggle buttons. These buttons are intelligently integrated within the component, providing a seamless and user-friendly 
+     interface for selecting and configuring permissions. By interacting with the switch toggle buttons, you can conveniently enable 
+     or disable permissions as per your requirements."
+     :componentDocs="docs" :ptTabComponent="ptComponent" />
 </template>
 
 <script>
-import BasicDoc from '@/doc/forms/FormCreate/BasicDoc.vue';
-import withToastDoc from '@/doc/forms/FormCreate/withToastDoc.vue';
-import ErrorHandler from '@/doc/forms/FormCreate/ErrorHandler.vue';
-import CustomInputs from '../../doc/forms/FormCreate/CustomInputs.vue';
-
+import Usage from '@/doc/forms/PermissionsInput/Usage.vue';
 
 export default {
     data() {
         return {
             docs: [
                 {
-                    id: 'basic',
-                    label: 'Basic',
-                    component: BasicDoc
-                },
-                {
-                    id: 'toastHandler',
-                    label: 'With ToastHandler',
-                    component: withToastDoc
-                },
-                {
-                    id: 'ErrorHandler',
-                    label: 'ErrorHandler',
-                    component: ErrorHandler
-                },
-                {
-                    id: 'CustomInputs',
-                    label: 'With Custom Inputs',
-                    component: CustomInputs
+                    id: 'Usage',
+                    label: 'Usage',
+                    component: Usage
                 },
             ],
             // ptComponent: PTComponent,

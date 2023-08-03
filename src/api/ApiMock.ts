@@ -143,8 +143,8 @@ export const roleFindRequest: RoleFindRequest = {
 
 };
 export const roleFindResponse: RoleFindResponse = {
-    roleName: "head chef",
-    roleDescription: "head chef role",
+    roleName: "Sales Manager",
+    roleDescription: "sales manager role .. ",
     permissions: [1, 2, 3, 4, 5],
     roleId: 1,
     roleUsers: 0,
