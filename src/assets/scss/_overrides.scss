@@ -18,11 +18,12 @@ pre {
   position: fixed !important;
 }
 
-.doc-intro , .doc-section-label{
+.doc-intro,
+.doc-section-label {
   font-size: 2rem;
   margin: 50px 0 20px 0;
 }
-.doc-section-description{
+.doc-section-description {
   margin: 10px 0;
 }
 // li:not(.p-menuitem):not(.formkit-message) {
@@ -32,7 +33,12 @@ pre {
 //   // list-style: none;
 // }
 
-
+strong {
+  font-size: 25px;
+}
+.doc-section-description {
+  font-size: 18px;
+}
 strong,
 h1,
 h2 {

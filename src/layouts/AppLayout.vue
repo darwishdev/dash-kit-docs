@@ -75,7 +75,7 @@ export default defineComponent({
             </template>
             <app-menu :model="SideBarItems" />
         </Sidebar>
-        
+        <app-toast />
         <dynamic-dialog />
     </div>
 </template>

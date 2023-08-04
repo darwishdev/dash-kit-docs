@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import type { FormOptions, SubmitHandler,FormSeciton } from 'dash-kit/types'
-import type { RoleCreateRequest , RoleCreateResponse } from '@/api/ApiTypes'
+import type { FormOptions, ToastHandler, SubmitHandler, FormSeciton } from 'dash-kit/types'
+import type { RoleCreateRequest, RoleCreateResponse } from '@/api/ApiTypes'
 import apiClient from '@/api/ApiMock';
-import { ToastHandler } from '../../../../../../dist/types/types';
 
-const code : any = {
-    basic : `
+const code: any = {
+    basic: `
 <script setup lang="ts">
 import type { FormOptions, SubmitHandler,FormSeciton,ToastHandler } from 'dash-kit/types'
 import type { RoleCreateRequest , RoleCreateResponse } from '@/api/ApiTypes'
@@ -98,29 +97,30 @@ const options: FormOptions = {
     withBackground: true
 }
 const toastHandler: ToastHandler = {
-    hideToast : false,
-    message : 'role created successfully',
-    title : 'role saved'
+    hideToast: false,
+    message: 'role created successfully',
+    title: 'role saved'
 }
 
 const submitHandler: SubmitHandler<RoleCreateRequest, RoleCreateRequest, RoleCreateResponse> = {
-            submit: apiClient.roleCreateWithErr,
-            errorHandler : {
-                globalErrors : {
-                    'internalServerError' : 'internal Server Error happened'
-                },
-                fieldErrors : {
-                    'already_exists unique_constraint_roles_role_name_key' : {
-                        roleName : 'this role name already exists'
-                    }
-                }
-            },
+    submit: apiClient.roleCreateWithErr,
+    errorHandler: {
+        globalErrors: {
+            'internalServerError': 'internal Server Error happened'
+        },
+        fieldErrors: {
+            'unique_constraint_roles_role_name_key': {
+                roleName: 'this role name already exists'
+            }
+        }
+    },
 }
 
 </script>
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>Try using CreateForm component with passing the ErrorHandler object property to map your server errors to the corresponding fields to be displayed correctly</p>
+        <p>Try using CreateForm component with passing the ErrorHandler object property to map your server errors to the
+            corresponding fields to be displayed correctly</p>
     </DocSectionText>
     <div>
         <form-create :sections="sections" :submitHandler="submitHandler" :ToastHandler="toastHandler" :options="options" />

@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import type { FormOptions, SubmitHandler,FormSeciton } from 'dash-kit/types'
-import type { RoleCreateRequest , RoleCreateResponse } from '@/api/ApiTypes'
+import type { FormOptions, SubmitHandler, FormSeciton } from 'dash-kit/types'
+import type { RoleCreateRequest, RoleCreateResponse } from '@/api/ApiTypes'
 import apiClient from '@/api/ApiMock';
 import { ToastHandler } from 'dash-kit/types';
 
-const code : any = {
-    basic : `
+const code: any = {
+    basic: `
 <script setup lang="ts">
 import type { FormOptions, SubmitHandler,FormSeciton,ToastHandler } from 'dash-kit/types'
 import type { RoleCreateRequest , RoleCreateResponse } from '@/api/ApiTypes'
@@ -89,24 +89,25 @@ const options: FormOptions = {
     withBackground: true
 }
 const toastHandler: ToastHandler = {
-    hideToast : false,
-    message : 'role created successfully',
-    title : 'role saved'
+    hideToast: false,
+    message: 'role created successfully',
+    title: 'role saved'
 }
 
 const submitHandler: SubmitHandler<RoleCreateRequest, RoleCreateRequest, RoleCreateResponse> = {
-            submit: apiClient.roleCreate,
-            errorHandler : {},
+    submit: apiClient.roleCreate,
+    errorHandler: {},
 
 }
 
 </script>
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>Try using CreateForm component with passing ToastHandler configuration as a prop so it will be displayed after form submitting successfully</p>
+        <p>Try using CreateForm component with passing ToastHandler configuration as a prop so it will be displayed after
+            form submitting successfully</p>
     </DocSectionText>
     <div>
-        <form-create :sections="sections" :submitHandler="submitHandler" :ToastHandler="toastHandler" :options="options" />
+        <form-create :sections="sections" :submitHandler="submitHandler" :toastHandler="toastHandler" :options="options" />
     </div>
     <DocSectionCode :code="code" />
 </template>

@@ -59,9 +59,10 @@ export default {
                 let events = null;
                 let options = null;
                 let interfaces = null;
-
+                console.log(values)
                 if (values) {
                     props = values[`${docName}Props`];
+                    console.log(props)
                     emits = values[`${docName}Emits`];
                     slots = values[`${docName}Slots`];
                     events = this.findEvents(values);
