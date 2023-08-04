@@ -367,18 +367,30 @@
                     "relatedProp": "",
                     "props": [
                         {
-                            "name": "multiple",
-                            "optional": true,
+                            "name": "sections",
+                            "optional": false,
                             "readonly": false,
-                            "type": "boolean",
-                            "default": "false",
-                            "description": "When enabled, multiple tabs can be activated at the same time."
+                            "type": "FormSeciton[]",
+                            "default": "",
+                            "description": "each section will have array of inputs as value and section title as key"
                         },
                         {
-                            "name": "forceSelection2",
-                            "type": "boolean",
-                            "default": "false",
-                            "description": "When present, autocomplete clears the manual input if it does not match of the suggestions to force only accepting values from the suggestions"
+                            "name": "options",
+                            "type": "FormOptions",
+                            "default": "",
+                            "description": "options to control how the form will look"
+                        },
+                        {
+                            "name": "submitHandler",
+                            "type": "SubmitHandler<any, any, any>",
+                            "default": "",
+                            "description": "this used on submitting the form"
+                        },
+                        {
+                            "name": "toastHandler",
+                            "type": "ToastHandler",
+                            "default": "",
+                            "description": "this used wo show certain success message after success"
                         }
                     ],
                     "methods": []
