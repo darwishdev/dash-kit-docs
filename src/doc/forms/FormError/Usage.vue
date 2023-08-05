@@ -1,19 +1,19 @@
 <script setup lang="ts">
-import type { FormOptions, SubmitHandler,FormSeciton } from 'dash-kit/types'
-import type { RoleCreateRequest , RoleCreateResponse , RoleFindRequest , RoleFindResponse } from '@/api/ApiTypes'
+import type { FormOptions, SubmitHandler, FormSeciton } from 'vuedashkit/types'
+import type { RoleCreateRequest, RoleCreateResponse, RoleFindRequest, RoleFindResponse } from '@/api/ApiTypes'
 import apiClient from '@/api/ApiMock';
-import { useDataFetcherList } from "dash-kit/composables";
-const { loading , fetchData , error } = useDataFetcherList<RoleFindRequest, RoleFindResponse>(apiClient.roleFindWithErr, {roleId : 1} as RoleFindRequest);
+import { useDataFetcherList } from "vuedashkit/composables";
+const { loading, fetchData, error } = useDataFetcherList<RoleFindRequest, RoleFindResponse>(apiClient.roleFindWithErr, { roleId: 1 } as RoleFindRequest);
 
 
-const code : any = {
-    basic : `
+const code: any = {
+    basic: `
 <script setup lang="ts">
-import type { FormOptions, SubmitHandler } from 'dash-kit/types'
+import type { FormOptions, SubmitHandler } from 'vuedashkit/types'
 import type { RoleCreateRequest , RoleCreateResponse , RoleFindRequest , RoleFindResponse } from '@/api/ApiTypes'
 import apiClient from '@/api/ApiMock'; // replace with your api client
 import rolesForm from '@/src/forms/rolesForm' //replace with your own formSchema 
-import { useDataFetcherFind } from "dash-kit/composables";
+import { useDataFetcherFind } from "vuedashkit/composables";
 const {sections} = rolesForm
 
 // customize the DataFetcher with your api function to fetch the form's data
@@ -82,8 +82,8 @@ const options: FormOptions = {
 }
 
 const submitHandler: SubmitHandler<RoleCreateRequest, RoleCreateRequest, RoleCreateResponse> = {
-            submit: apiClient.roleCreate,
-            errorHandler : {},
+    submit: apiClient.roleCreate,
+    errorHandler: {},
 
 }
 

@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import type { FormOptions, SubmitHandler,FormSeciton } from 'dash-kit/types'
-import type { RoleCreateRequest , RoleCreateResponse  } from '@/api/ApiTypes'
+import type { FormOptions, SubmitHandler, FormSeciton } from 'vuedashkit/types'
+import type { RoleCreateRequest, RoleCreateResponse } from '@/api/ApiTypes'
 import apiClient from '@/api/ApiMock';
 import { ref } from 'vue';
 const permissions = ref()
-const code : any = {
-    basic : `
+const code: any = {
+    basic: `
 <script setup lang="ts">
-import type { FormOptions, SubmitHandler,FormSeciton } from 'dash-kit/types'
+import type { FormOptions, SubmitHandler,FormSeciton } from 'vuedashkit/types'
 import type { RoleCreateRequest , RoleCreateResponse } from '@/api/ApiTypes'
 import apiClient from '@/api/ApiMock'; // replace with your api client
 
@@ -69,7 +69,7 @@ const submitHandler: SubmitHandler<RoleCreateRequest, RoleCreateRequest, RoleCre
 
 `
 }
-const sectionsss: FormSeciton[] = [ 
+const sectionsss: FormSeciton[] = [
     {
         'role Info': [
             {
@@ -99,7 +99,7 @@ const sectionsss: FormSeciton[] = [
                     outerClass: "w-full",
                     type: 'permissions',
                     name: 'permissions',
-                    permissions: apiClient.permissionsList 
+                    permissions: apiClient.permissionsList
                 }
             }
         ],
@@ -118,26 +118,25 @@ const submitCallBack = (response: RoleCreateResponse) => {
     console.log(response);
 }
 const submitFunc = async (_req: RoleCreateRequest): Promise<any> => {
-        await new Promise((resolve) => setTimeout(resolve, 1000));
-        console.log(_req);
-        permissions.value = _req
-        apiClient.roleCreate
-    }
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    console.log(_req);
+    permissions.value = _req
+    apiClient.roleCreate
+}
 
 const submitHandler: SubmitHandler<RoleCreateRequest, RoleCreateRequest, RoleCreateResponse> = {
-            submit: submitFunc,
-            errorHandler : {},
-            submitCallBack : submitCallBack
+    submit: submitFunc,
+    errorHandler: {},
+    submitCallBack: submitCallBack
 }
 
 </script>
 <template>
-
     <DocSectionText v-bind="$attrs">
         <p>Try using the Permission custom input in a create form</p>
     </DocSectionText>
     <div>
-        <form-create  :sections="sectionsss" :submitHandler="submitHandler" :options="options" />
+        <form-create :sections="sectionsss" :submitHandler="submitHandler" :options="options" />
         <h1 class="text-3xl">Values : </h1>
         <p class="text-primary">{{ permissions }}</p>
         <p class="text-md my-3">submit the above form to see the form values after using permissions</p>

@@ -1,19 +1,19 @@
 <script setup lang="ts">
-import { DeleteRestoreHandler, DialogDeleteRestoreParms } from 'dash-kit/types'
+import { DeleteRestoreHandler, DialogDeleteRestoreParms } from 'vuedashkit/types'
 import type { RoleDeleteRestoreRequest } from '@/api/ApiTypes'
 import apiClient from '@/api/ApiMock';
 import { useDialog } from 'primevue/usedialog';
-import { useDialogDeleteRestore } from 'dash-kit/composables';
+import { useDialogDeleteRestore } from 'vuedashkit/composables';
 const dialog = useDialog()
 
 const code: any = {
     basic: `
 <script setup lang="ts">
-import { DeleteRestoreHandler, DialogDeleteRestoreParms } from 'dash-kit/types'
+import { DeleteRestoreHandler, DialogDeleteRestoreParms } from 'vuedashkit/types'
 import type { RoleDeleteRestoreRequest } from '@/api/ApiTypes'
 import apiClient from '@/api/ApiMock';
 import { useDialog } from 'primevue/usedialog';
-import { useDialogDeleteRestore } from 'dash-kit/composables';
+import { useDialogDeleteRestore } from 'vuedashkit/composables';
 const dialog = useDialog()
 
 const deleteRestoreHandler: DeleteRestoreHandler<RoleDeleteRestoreRequest> = {

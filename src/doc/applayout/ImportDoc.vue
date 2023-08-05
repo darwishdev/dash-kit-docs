@@ -22,10 +22,10 @@ export default {
             code: {
                 basic: `// router/index.js
 import { createRouter, createWebHistory } from 'vue-router';
-import { LoginView, UnauthorizedView } from 'dash-kit/views';
+import { LoginView, UnauthorizedView } from 'vuedashkit/views';
 import ProfileView from '../views/ProfileView.vue';
 import DashboardView from '../views/DashboardView.vue';
-import { AppLayout } from 'dash-kit/base';
+import { AppLayout } from 'vuedashkit/base';
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),

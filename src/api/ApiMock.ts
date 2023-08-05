@@ -1,7 +1,7 @@
 // @ts-ignore
 import type {
-    FileUploadRequest, FileUploadResponse, FileRemoveRequest, PermissionsListResponse
-} from 'dash-kit/types'
+    FileUploadResponse, PermissionsListResponse
+} from 'vuedashkit/types'
 import permissions from '@/api/permissions'
 
 import type {
@@ -248,7 +248,7 @@ const apiClient: ApiClient = {
     roleCreate: async (_req: RoleCreateRequest): Promise<RoleCreateResponse> => {
         await new Promise((resolve) => setTimeout(resolve, 1000));
         console.log('hii');
-        
+
         return roleCreateResponse;
     },
     roleBulkCreate: async (_req: RoleBulkCreateRequest): Promise<RoleBulkCreateResponse> => {

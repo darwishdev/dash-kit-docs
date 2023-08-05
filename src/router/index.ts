@@ -12,44 +12,44 @@ const router = createRouter({
                 {
                     path: '/getting-started/introduction',
                     name: "home_view",
-                    component:import('@/views/getting_started/IntroductionView.vue')
+                    component: () => import('@/views/getting_started/IntroductionView.vue')
                 },
                 {
                     path: '/getting-started/installation',
-                    component:import('@/views/getting_started/InstallationView.vue')
+                    component: () => import('@/views/getting_started/InstallationView.vue')
                 },
                 {
                     path: '/getting-started/configuration',
-                    component:import('@/views/getting_started/ConfigurationView.vue')
+                    component: () => import('@/views/getting_started/ConfigurationView.vue')
                 },
                 // form routes...
                 {
                     path: '/forms/input-permissions',
-                    component:  () => import('@/views/forms/InputPermissionsView.vue'),
+                    component: () => import('@/views/forms/InputPermissionsView.vue'),
                 },
                 {
                     path: '/forms/input-file',
-                    component:  () => import('@/views/forms/InputFileUploadView.vue'),
+                    component: () => import('@/views/forms/InputFileUploadView.vue'),
                 },
                 {
                     path: '/forms/form-create',
-                    component:  () => import('@/views/forms/FormCreateView.vue'),
+                    component: () => import('@/views/forms/FormCreateView.vue'),
                 },
                 {
                     path: '/forms/form-update',
-                    component:  () => import('@/views/forms/FormUpdateView.vue'),
+                    component: () => import('@/views/forms/FormUpdateView.vue'),
                 },
                 {
                     path: '/forms/form-filter',
-                    component:  () => import('@/views/forms/FormFilterView.vue'),
+                    component: () => import('@/views/forms/FormFilterView.vue'),
                 },
                 {
                     path: '/forms/form-loading',
-                    component:  () => import('@/views/forms/FormLoadingView.vue'),
+                    component: () => import('@/views/forms/FormLoadingView.vue'),
                 },
                 {
                     path: '/forms/form-error',
-                    component:  () => import('@/views/forms/FormErrorView.vue'),
+                    component: () => import('@/views/forms/FormErrorView.vue'),
                 },
                 // Components - Base
                 {
@@ -139,7 +139,7 @@ const router = createRouter({
             ]
         },
         // Add more top-level routes here if needed...
-        { 
+        {
             path: '/contribution',
             name: 'contribution_view',
             component: () => import('@/views/ContributionView.vue')

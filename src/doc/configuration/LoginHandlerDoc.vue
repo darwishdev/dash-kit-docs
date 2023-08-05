@@ -119,7 +119,7 @@ export interface LoginResponse {
             },
             summaryCode: {
                 basic: `// dashkit.config.ts
-import type { LoginHandler } from 'dash-kit/types';
+import type { LoginHandler } from 'vuedashkit/types';
 import apiClient from './api/ApiClient'; // Replace with your API client
 
 const loginErrorHandler: ErrorHandler = {

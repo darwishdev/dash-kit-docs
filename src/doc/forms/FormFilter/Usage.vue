@@ -1,11 +1,11 @@
 <script setup lang="ts">
-// import type { FormOptions, SubmitHandler } from 'dash-kit/types'
+// import type { FormOptions, SubmitHandler } from 'vuedashkit/types'
 // import type { RoleCreateRequest , RoleCreateResponse} from '@/api/ApiTypes'
 // import apiClient from '@/api/ApiMock';
 import { ref } from 'vue';
 
-const code : any = {
-    basic : `
+const code: any = {
+    basic: `
 <script setup lang="ts">
 
 const filterModel = ref({ roleName: "asms" })
@@ -82,8 +82,9 @@ const filterRemoved = (filter: string) => {
     </DocSectionText>
     <div class="my-3">
         <div>
-            <form-filter v-model="filterModel" v-model:modelDisplay="modelDisplay" @filter="filtered" @removeFilter="filterRemoved"
-            :options="{ showActiveFilters: true, showClearFilters: true }" :inputs="filterForm"  />
+            <form-filter v-model="filterModel" v-model:modelDisplay="modelDisplay" @filter="filtered"
+                @removeFilter="filterRemoved" :options="{ showActiveFilters: true, showClearFilters: true }"
+                :inputs="filterForm" />
         </div>
         <p class="my-2">filterModel : {{ filterModel }}</p>
         <p class="my-2">modelDisplay : {{ modelDisplay }}</p>

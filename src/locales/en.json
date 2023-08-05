@@ -1,6 +1,10 @@
 {
     "dashboard": "dashboard",
     "roles_list": "roles",
+    "show_filters": "show filters",
+    "roleDescription_filter": "description",
+    "roleName_filter": "name",
+    "clear_filters": "clear filters",
     "permissions": "Permissions",
     "users": "Users",
     "incorrect_password": "this password is incorrect",

@@ -1,19 +1,19 @@
 <script setup lang="ts">
-import {  DialogCreateParms,FormSeciton , FormOptions , ToastHandler , SubmitHandler } from 'dash-kit/types'
-import type { RoleCreateRequest , RoleCreateResponse } from '@/api/ApiTypes'
+import { DialogCreateParms, FormSeciton, FormOptions, ToastHandler, SubmitHandler } from 'vuedashkit/types'
+import type { RoleCreateRequest, RoleCreateResponse } from '@/api/ApiTypes'
 import apiClient from '@/api/ApiMock';
 import { useDialog } from 'primevue/usedialog';
-import { useDialogCreate } from 'dash-kit/composables';
+import { useDialogCreate } from 'vuedashkit/composables';
 const dialog = useDialog()
 
 const code: any = {
     basic: `
 <script setup lang="ts">
-import {  DialogCreateParms,FormSeciton , FormOptions , ToastHandler , SubmitHandler } from 'dash-kit/types'
+import {  DialogCreateParms,FormSeciton , FormOptions , ToastHandler , SubmitHandler } from 'vuedashkit/types'
 import type { RoleCreateRequest , RoleCreateResponse } from '@/api/ApiTypes'
 import apiClient from '@/api/ApiMock'; // replace with your api client
 import { useDialog } from 'primevue/usedialog';
-import { useDialogCreate } from 'dash-kit/composables';
+import { useDialogCreate } from 'vuedashkit/composables';
 const dialog = useDialog()
 
 const sections: FormSeciton[] = [
@@ -125,37 +125,37 @@ const options: FormOptions = {
     withBackground: true
 }
 const toastHandler: ToastHandler = {
-    hideToast : false,
-    message : 'role created successfully',
-    title : 'role saved'
+    hideToast: false,
+    message: 'role created successfully',
+    title: 'role saved'
 }
 
 const submitHandler: SubmitHandler<RoleCreateRequest, RoleCreateRequest, RoleCreateResponse> = {
-            submit: apiClient.roleCreate,
-            errorHandler : {
-                globalErrors : {
-                    'internalServerError' : 'internal Server Error happened'
-                },
-                fieldErrors : {
-                    'already_exists unique_constraint_roles_role_name_key' : {
-                        roleName : 'this role name already exists'
-                    }
-                }
-            },
+    submit: apiClient.roleCreate,
+    errorHandler: {
+        globalErrors: {
+            'internalServerError': 'internal Server Error happened'
+        },
+        fieldErrors: {
+            'already_exists unique_constraint_roles_role_name_key': {
+                roleName: 'this role name already exists'
+            }
+        }
+    },
 }
 const createDialogParms: DialogCreateParms = {
-                onConfirmed: () => {
-                    console.log('role created successfully');
-                    
-                },
-                form: {
-                    sections : sections ,
-                    options : options , 
-                    submitHandler : submitHandler ,
-                    toastHandler : toastHandler
-                },
-                dialog : dialog
-            }
+    onConfirmed: () => {
+        console.log('role created successfully');
+
+    },
+    form: {
+        sections: sections,
+        options: options,
+        submitHandler: submitHandler,
+        toastHandler: toastHandler
+    },
+    dialog: dialog
+}
 
 const openDialog = () => {
     const createDialog = useDialogCreate(createDialogParms);

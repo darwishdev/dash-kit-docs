@@ -36,7 +36,7 @@ import router from './router'
 import App from './App.vue'
 import 'dash-kit/style'
 import '@/assets/scss/app.scss'
-import DashKit from 'dash-kit'
+import DashKit from 'vuedashkit'
 
 import dashkitConfig from './dashkit.config'
 const app = createApp(App)

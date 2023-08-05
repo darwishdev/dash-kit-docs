@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import type { FormOptions, ToastHandler, SubmitHandler, FormSeciton } from 'dash-kit/types'
+import type { FormOptions, ToastHandler, SubmitHandler, FormSeciton } from 'vuedashkit/types'
 import type { RoleCreateRequest, RoleCreateResponse } from '@/api/ApiTypes'
 import apiClient from '@/api/ApiMock';
 
 const code: any = {
     basic: `
 <script setup lang="ts">
-import type { FormOptions, SubmitHandler,FormSeciton,ToastHandler } from 'dash-kit/types'
+import type { FormOptions, SubmitHandler,FormSeciton,ToastHandler } from 'vuedashkit/types'
 import type { RoleCreateRequest , RoleCreateResponse } from '@/api/ApiTypes'
 import apiClient from '@/api/ApiMock'; // replace with your api client
 

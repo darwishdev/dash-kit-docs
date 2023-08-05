@@ -1,19 +1,19 @@
 <script setup lang="ts">
-import type { FormOptions, SubmitHandler,FormSeciton } from 'dash-kit/types'
-import type { RoleCreateRequest , RoleCreateResponse , RoleFindRequest , RoleFindResponse } from '@/api/ApiTypes'
+import type { FormOptions, SubmitHandler, FormSeciton } from 'vuedashkit/types'
+import type { RoleCreateRequest, RoleCreateResponse, RoleFindRequest, RoleFindResponse } from '@/api/ApiTypes'
 import apiClient from '@/api/ApiMock';
-import { useDataFetcherList } from "dash-kit/composables";
-const { loading , fetchData } = useDataFetcherList<RoleFindRequest, RoleFindResponse>(apiClient.roleFind, {roleId : 1} as RoleFindRequest);
+import { useDataFetcherList } from "vuedashkit/composables";
+const { loading, fetchData } = useDataFetcherList<RoleFindRequest, RoleFindResponse>(apiClient.roleFind, { roleId: 1 } as RoleFindRequest);
 
 
-const code : any = {
-    basic : `
+const code: any = {
+    basic: `
 <script setup lang="ts">
-import type { FormOptions, SubmitHandler } from 'dash-kit/types'
+import type { FormOptions, SubmitHandler } from 'vuedashkit/types'
 import type { RoleCreateRequest , RoleCreateResponse , RoleFindRequest , RoleFindResponse } from '@/api/ApiTypes'
 import apiClient from '@/api/ApiMock'; // replace with your api client
 import rolesForm from '@/src/forms/rolesForm' //replace with your own formSchema 
-import { useDataFetcherFind } from "dash-kit/composables";
+import { useDataFetcherFind } from "vuedashkit/composables";
 const {sections} = rolesForm
 
 // customize the DataFetcher with your api function to fetch the form's data
@@ -77,8 +77,8 @@ const options: FormOptions = {
 }
 
 const submitHandler: SubmitHandler<RoleCreateRequest, RoleCreateRequest, RoleCreateResponse> = {
-            submit: apiClient.roleCreate,
-            errorHandler : {},
+    submit: apiClient.roleCreate,
+    errorHandler: {},
 
 }
 
@@ -100,10 +100,15 @@ const submitHandler: SubmitHandler<RoleCreateRequest, RoleCreateRequest, RoleCre
     </div>
     <DocSectionCode :code="code" />
     <h1>NOTE : </h1>
-    <p class="text-justify">We have observed that the FormUpdate component already utilizes the FormLoading component in its implementation,
-         as demonstrated by the examples provided in the <router-link to="/forms/form-update">FormUpdate component documentation</router-link>. Through our testing, we have
-        found that the FormLoading component effectively enhances the user experience by providing a visual indication of the 
-        form's loading state during updates and data fetching. As such, we highly recommend the use of this component in conjunction
-         with both FormCreate and FormUpdate features to optimize the usability of the form and improve overall user satisfaction.
-        </p>
+    <p class="text-justify">We have observed that the FormUpdate component already utilizes the FormLoading component in its
+        implementation,
+        as demonstrated by the examples provided in the <router-link to="/forms/form-update">FormUpdate component
+            documentation</router-link>. Through our testing, we have
+        found that the FormLoading component effectively enhances the user experience by providing a visual indication of
+        the
+        form's loading state during updates and data fetching. As such, we highly recommend the use of this component in
+        conjunction
+        with both FormCreate and FormUpdate features to optimize the usability of the form and improve overall user
+        satisfaction.
+    </p>
 </template> 

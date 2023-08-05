@@ -1,15 +1,15 @@
 <script setup lang="ts">
-// import type { FormOptions, SubmitHandler,FormSeciton,FindHandler } from 'dash-kit/types'
-import type { RolesListRequest , RolesListResponse } from '@/api/ApiTypes'
+// import type { FormOptions, SubmitHandler,FormSeciton,FindHandler } from 'vuedashkit/types'
+import type { RolesListRequest, RolesListResponse } from '@/api/ApiTypes'
 import apiClient from '@/api/ApiMock';
-import { useDataFetcherList } from 'dash-kit/composables';
+import { useDataFetcherList } from 'vuedashkit/composables';
 
-const code : any = {
-    basic : `
+const code: any = {
+    basic: `
 <script setup lang="ts">
 import type { RolesListRequest , RolesListResponse } from '@/api/ApiTypes'
 import apiClient from '@/api/ApiMock'; // replace with your api client
-import { useDataFetcherList } from 'dash-kit/composables';
+import { useDataFetcherList } from 'vuedashkit/composables';
 
 const { responseData, loading, error, fetchData } = useDataFetcherList<RolesListRequest, RolesListResponse>(apiClient.rolesList, {} as RolesListRequest);
 

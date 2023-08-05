@@ -1,6 +1,6 @@
 import apiClient from '@/api/ApiClient'
 import formKitConfig from './formkit.config'
-import type { DashKitConfig, ErrorHandler, LoginHandler, UploadHandler } from 'dash-kit/types'
+import type { DashKitConfig, ErrorHandler, LoginHandler, UploadHandler } from 'vuedashkit/types'
 import en from '@/locales/en.json'
 import ar from '@/locales/ar.json'
 

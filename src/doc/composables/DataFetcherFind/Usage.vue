@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import type { RoleFindRequest , RoleFindResponse } from '@/api/ApiTypes'
+import type { RoleFindRequest, RoleFindResponse } from '@/api/ApiTypes'
 import apiClient from '@/api/ApiMock';
-import { useDataFetcherFind } from 'dash-kit/composables';
+import { useDataFetcherFind } from 'vuedashkit/composables';
 
-const code : any = {
-    basic : `
+const code: any = {
+    basic: `
 <script setup lang="ts">
 import type { RoleFindRequest , RoleFindResponse } from '@/api/ApiTypes'
 import apiClient from '@/api/ApiMock'; // replace with your api client
-import { useDataFetcherFind } from 'dash-kit/composables';
+import { useDataFetcherFind } from 'vuedashkit/composables';
 
 const { responseData, loading, error, fetchData } = useDataFetcherFind<RoleFindRequest, RoleFindResponse>(apiClient.roleFind, {roleId : 1} as RoleFindRequest);
 
@@ -32,7 +32,7 @@ const { responseData, loading, error, fetchData } = useDataFetcherFind<RoleFindR
 `
 }
 
-const { responseData, loading, error, fetchData } = useDataFetcherFind<RoleFindRequest, RoleFindResponse>(apiClient.roleFind, {roleId : 1} as RoleFindRequest);
+const { responseData, loading, error, fetchData } = useDataFetcherFind<RoleFindRequest, RoleFindResponse>(apiClient.roleFind, { roleId: 1 } as RoleFindRequest);
 
 
 </script>

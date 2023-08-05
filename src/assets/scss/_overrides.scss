@@ -33,7 +33,7 @@ pre {
 //   // list-style: none;
 // }
 
-strong {
+:not(h3) strong {
   font-size: 25px;
 }
 .doc-section-description {

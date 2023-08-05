@@ -31,7 +31,7 @@ export default {
             dashkit: {
                 basic: `// dashkit.config.ts
 import formKitConfig from './formkit.config'
-import type { DashKitConfig } from 'dash-kit/types'
+import type { DashKitConfig } from 'vuedashkit/types'
 import en from '@/locales/en.json'
 import ar from '@/locales/ar.json'
 `,

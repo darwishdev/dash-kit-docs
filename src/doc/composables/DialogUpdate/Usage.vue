@@ -1,19 +1,19 @@
 <script setup lang="ts">
-import {  FormSeciton , FormOptions , FindHandler ,  ToastHandler , SubmitHandler , DialogUpdateParms } from 'dash-kit/types'
-import type { RoleUpdateRequest , RoleUpdateResponse , RoleFindRequest , RoleFindResponse } from '@/api/ApiTypes'
+import { FormSeciton, FormOptions, FindHandler, ToastHandler, SubmitHandler, DialogUpdateParms } from 'vuedashkit/types'
+import type { RoleUpdateRequest, RoleUpdateResponse, RoleFindRequest, RoleFindResponse } from '@/api/ApiTypes'
 import apiClient from '@/api/ApiMock';
 import { useDialog } from 'primevue/usedialog';
-import { useDialogUpdate } from 'dash-kit/composables';
+import { useDialogUpdate } from 'vuedashkit/composables';
 const dialog = useDialog()
 
 const code: any = {
     basic: `
 <script setup lang="ts">
-import {  FormSeciton , FormOptions , FindHandler ,  ToastHandler , SubmitHandler , DialogUpdateParms } from 'dash-kit/types'
+import {  FormSeciton , FormOptions , FindHandler ,  ToastHandler , SubmitHandler , DialogUpdateParms } from 'vuedashkit/types'
 import type { RoleUpdateRequest , RoleUpdateResponse , RoleFindRequest , RoleFindResponse } from '@/api/ApiTypes'
 import apiClient from '@/api/ApiMock'; // replace with your api client 
 import { useDialog } from 'primevue/usedialog';
-import { useDialogUpdate } from 'dash-kit/composables';
+import { useDialogUpdate } from 'vuedashkit/composables';
 const dialog = useDialog()
 
 
@@ -138,41 +138,41 @@ const options: FormOptions = {
     withBackground: true
 }
 const toastHandler: ToastHandler = {
-    hideToast : false,
-    message : 'role created successfully',
-    title : 'role saved'
+    hideToast: false,
+    message: 'role created successfully',
+    title: 'role saved'
 }
-const findHandler: FindHandler<RoleFindRequest , RoleFindResponse , RoleFindResponse> = {
-    findFunction : apiClient.roleFind,
-    requestPropertyName : 'roleId',
-    requestValue : 1
+const findHandler: FindHandler<RoleFindRequest, RoleFindResponse, RoleFindResponse> = {
+    findFunction: apiClient.roleFind,
+    requestPropertyName: 'roleId',
+    requestValue: 1
 }
 
 const submitHandler: SubmitHandler<RoleUpdateRequest, RoleUpdateRequest, RoleUpdateResponse> = {
-            submit: apiClient.roleUpdate,
-            errorHandler : {
-                globalErrors : {
-                    'internalServerError' : 'internal Server Error happened'
-                },
-                fieldErrors : {
-                    'already_exists unique_constraint_roles_role_name_key' : {
-                        roleName : 'this role name already exists'
-                    }
-                }
-            },
+    submit: apiClient.roleUpdate,
+    errorHandler: {
+        globalErrors: {
+            'internalServerError': 'internal Server Error happened'
+        },
+        fieldErrors: {
+            'already_exists unique_constraint_roles_role_name_key': {
+                roleName: 'this role name already exists'
+            }
+        }
+    },
 }
 const updateDialogParms: DialogUpdateParms = {
-                onConfirmed: () => {
-                    console.log('role updated');
-                },
-                form: {
-                    sections : sections,
-                    options : options, 
-                    submitHandler : submitHandler , 
-                    toastHandler : toastHandler ,
-                    findHandler : findHandler
-                },
-                dialog : dialog
+    onConfirmed: () => {
+        console.log('role updated');
+    },
+    form: {
+        sections: sections,
+        options: options,
+        submitHandler: submitHandler,
+        toastHandler: toastHandler,
+        findHandler: findHandler
+    },
+    dialog: dialog
 
 }
 

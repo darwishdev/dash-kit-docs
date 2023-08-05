@@ -22,6 +22,7 @@
     "vue": "^3.3.4",
     "vue-i18n": "^9.2.2",
     "vue-router": "^4.2.2",
+    "vuedashkit": "^0.1.0",
     "xlsx": "^0.18.5"
   },
   "devDependencies": {

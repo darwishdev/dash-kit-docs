@@ -74,7 +74,7 @@ import { useI18n } from 'vue-i18n'
 import Toast from 'primevue/toast';
 import DynamicDialog from 'primevue/dynamicdialog';
 // import {} from "@/components"
-import { AppNav } from 'dash-kit/base'
+import { AppNav } from 'vuedashkit/base'
 import SideBarItems from '../assets/sidebar'
 // import i18n from '@/plugins/i18n'
 export default defineComponent({

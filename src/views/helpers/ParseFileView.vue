@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import Usage from '@/doc/composables/Dialog Update/Usage.vue';
+import Usage from '@/doc/composables/DialogUpdate/Usage.vue';
 
 export default {
     data() {

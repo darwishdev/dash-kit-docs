@@ -48,7 +48,7 @@ export default {
 
             uploadCode: {
                 basic: `// dashkit.config.ts
-import type { UploadHandler } from 'dash-kit/types';
+import type { UploadHandler } from 'vuedashkit/types';
 import apiClient from './api/ApiClient'; // Replace with your API client
 
 const uploadHandler: UploadHandler = {

@@ -1,8 +1,4 @@
 <template>
-    <Head>
-        <Title>Installation</Title>
-        <Meta name="description" content="PrimeVue is a rich set of open source components for Vue." />
-    </Head>
     <div class="doc">
         <div class="doc-main">
             <div class="doc-intro">

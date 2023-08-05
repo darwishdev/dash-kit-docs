@@ -8,7 +8,7 @@ import Breadcrumb from 'primevue/breadcrumb';
 import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import DynamicDialog from 'primevue/dynamicdialog';
-import { AppNav } from 'dash-kit/base'
+import { AppNav } from 'vuedashkit/base'
 import SideBarItems from '@/assets/sidebar'
 
 export default defineComponent({

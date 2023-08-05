@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import type { FormOptions, SubmitHandler,FormSeciton,FindHandler } from 'dash-kit/types'
-import type { RoleCreateRequest , RoleCreateResponse , RoleFindRequest , RoleFindResponse } from '@/api/ApiTypes'
+import type { FormOptions, SubmitHandler, FormSeciton, FindHandler } from 'vuedashkit/types'
+import type { RoleCreateRequest, RoleCreateResponse, RoleFindRequest, RoleFindResponse } from '@/api/ApiTypes'
 import apiClient from '@/api/ApiMock';
-import { ToastHandler } from '../../../../../../dist/types/types';
+import { ToastHandler } from 'vuedashkit/types';
 
-const code : any = {
-    basic : `
+const code: any = {
+    basic: `
 <script setup lang="ts">
-import type { FormOptions, SubmitHandler,FormSeciton,ToastHandler,FindHandler } from 'dash-kit/types'
+import type { FormOptions, SubmitHandler,FormSeciton,ToastHandler,FindHandler } from 'vuedashkit/types'
 import type { RoleCreateRequest , RoleCreateResponse } from '@/api/ApiTypes'
 import apiClient from '@/api/ApiMock'; // replace with your api client
 
@@ -88,10 +88,10 @@ const sections: FormSeciton[] = [
     },
 ]
 
-const findHandler : FindHandler<RoleFindRequest , RoleFindResponse , RoleFindResponse> = {
-    findFunction : apiClient.roleFind,
-    requestPropertyName : 'roleId',
-    requestValue : 1  
+const findHandler: FindHandler<RoleFindRequest, RoleFindResponse, RoleFindResponse> = {
+    findFunction: apiClient.roleFind,
+    requestPropertyName: 'roleId',
+    requestValue: 1
 }
 
 const options: FormOptions = {
@@ -100,27 +100,30 @@ const options: FormOptions = {
     withBackground: true
 }
 const toastHandler: ToastHandler = {
-    hideToast : false,
-    message : 'role updated successfully',
-    title : 'role saved'
+    hideToast: false,
+    message: 'role updated successfully',
+    title: 'role saved'
 }
 
 const submitHandler: SubmitHandler<RoleCreateRequest, RoleCreateRequest, RoleCreateResponse> = {
-            submit: apiClient.roleCreate,
-            errorHandler : {},
+    submit: apiClient.roleCreate,
+    errorHandler: {},
 
 }
 
 </script>
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>Try using FormUpdate component with passing the FindHandler prop so the fetched data will be populated in the form</p>
+        <p>Try using FormUpdate component with passing the FindHandler prop so the fetched data will be populated in the
+            form</p>
     </DocSectionText>
     <div>
-        <form-update :findHandler="findHandler" :sections="sections" :submitHandler="submitHandler" :ToastHandler="toastHandler" :options="options" />
+        <form-update :findHandler="findHandler" :sections="sections" :submitHandler="submitHandler"
+            :ToastHandler="toastHandler" :options="options" />
     </div>
     <DocSectionCode :code="code" />
     <h1>Note :</h1>
-    <p>Note that the <span class="font-bold text-2xl text-primary">requestValue</span> key in the findHandler prop is optional , so if you didn't define this key 
-    the findHandler will use the 'id' param from the route to be the requestValue</p>
+    <p>Note that the <span class="font-bold text-2xl text-primary">requestValue</span> key in the findHandler prop is
+        optional , so if you didn't define this key
+        the findHandler will use the 'id' param from the route to be the requestValue</p>
 </template>
