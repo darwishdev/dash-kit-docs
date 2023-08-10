@@ -1,63 +1,62 @@
 export default [
     {
-        key: "1", label: "Getting Started", icon: "pi pi-fw pi-user", to: null,
+        key: "1", label: "Getting Started", icon: "home", to: null,
         items: [
-            { key: "1.0", label: "Introduction", icon: "pi pi-fw pi-info-circle", to: "/getting-started/introduction" },
-            { key: "1.1", label: "Installation", icon: "pi pi-fw pi-download", to: "/getting-started/installation" },
-            { key: "1.2", label: "Configuration", icon: "pi pi-fw pi-cog", to: "/getting-started/configuration" },
+            { key: "1.0", label: "Introduction", icon: "info", to: "/getting-started/installation" },
+            { key: "1.2", label: "Configuration", icon: "settings", to: "/getting-started/configuration" },
         ]
     },
     {
-        key: "2", label: "Components", icon: "pi pi-fw pi-th-large", to: null,
+        key: "2", label: "Components", icon: "cards", to: null,
         items: [
             {
-                key: "2.0", label: "Forms", icon: "pi pi-fw pi-file", to: null,
+                key: "2.0", label: "Forms", icon: "post_add", to: null,
                 items: [
-                    { key: "2.0.0", label: "Input Permissions", icon: "pi pi-fw pi-users", to: "/forms/input-permissions" },
-                    { key: "2.0.1", label: "Input File", icon: "pi pi-fw pi-file", to: "/forms/input-file" },
-                    { key: "2.0.2", label: "Form Create", icon: "pi pi-fw pi-plus", to: "/forms/form-create" },
-                    { key: "2.0.3", label: "Form Update", icon: "pi pi-fw pi-pencil", to: "/forms/form-update" },
-                    { key: "2.0.4", label: "Form Filter", icon: "pi pi-fw pi-filter", to: "/forms/form-filter" },
-                    { key: "2.0.5", label: "Form Loading", icon: "pi pi-fw pi-spinner", to: "/forms/form-loading" },
-                    { key: "2.0.6", label: "Form Error", icon: "pi pi-fw pi-times-circle", to: "/forms/form-error" },
+                    { key: "2.0.0", label: "Input Permissions", icon: "group", to: "/forms/input-permissions" },
+                    { key: "2.0.1", label: "Input File", icon: "upload_file", to: "/forms/input-file" },
+                    { key: "2.0.2", label: "Form Create", icon: "save", to: "/forms/form-create" },
+                    { key: "2.0.3", label: "Form Update", icon: "edit_document", to: "/forms/form-update" },
+                    { key: "2.0.4", label: "Form Filter", icon: "filter_alt", to: "/forms/form-filter" },
+                    { key: "2.0.5", label: "Form Loading", icon: "progress_activity", to: "/forms/form-loading" },
+                    { key: "2.0.6", label: "Form Error", icon: "feedback", to: "/forms/form-error" },
                 ]
             },
             {
-                key: "2.1", label: "Base", icon: "pi pi-fw pi-clone", to: null,
+                key: "2.1", label: "Base", icon: "foundation", to: null,
                 items: [
-                    { key: "2.1.0", label: "App Layout", icon: "pi pi-fw pi-th-large", to: "/base/app-layout" },
-                    { key: "2.1.1", label: "App Nav", icon: "pi pi-fw pi-bars", to: "/base/app-nav" },
-                    { key: "2.1.2", label: "App Menu", icon: "pi pi-fw pi-bars", to: "/base/app-menu" },
-                    { key: "2.1.3", label: "App Card", icon: "pi pi-fw pi-id-card", to: "/base/app-card" },
-                    { key: "2.1.4", label: "App CRUD", icon: "pi pi-fw pi-table", to: "/base/app-crud" },
-                    { key: "2.1.5", label: "Icon Btn", icon: "pi pi-fw pi-image", to: "/base/icon-btn" },
+                    { key: "2.1.0", label: "App Layout", icon: "dashboard", to: "/base/app-layout" },
+                    { key: "2.1.1", label: "App Nav", icon: "toolbar", to: "/base/app-nav" },
+                    { key: "2.1.2", label: "App Menu", icon: "side_navigation", to: "/base/app-menu" },
+                    { key: "2.1.3", label: "App Card", icon: "badge", to: "/base/app-card" },
+                    { key: "2.1.4", label: "App CRUD", icon: "table", to: "/base/app-crud" },
+                    { key: "2.1.5", label: "Icon Btn", icon: "emoji_symbols", to: "/base/icon-btn" },
                 ]
             },
         ]
     },
     {
-        key: "3", label: "Composables", icon: "pi pi-fw pi-cog", to: null,
+        key: "3", label: "Composables", icon: "component_exchange", to: null,
         items: [
-            { key: "3.0", label: "Data Fetcher List", icon: "pi pi-fw pi-list", to: "/composables/data-fetcher-list" },
-            { key: "3.1", label: "Data Fetcher Find", icon: "pi pi-fw pi-search", to: "/composables/data-fetcher-find" },
-            { key: "3.2", label: "Delete Restore Dialog", icon: "pi pi-fw pi-trash", to: "/composables/delete-restore-dialog" },
-            { key: "3.3", label: "Dialog Update", icon: "pi pi-fw pi-pencil", to: "/composables/dialog-update" },
-            { key: "3.4", label: "Dialog Create", icon: "pi pi-fw pi-plus", to: "/composables/dialog-create" },
+            { key: "3.0", label: "Data Fetcher List", icon: "list_alt", to: "/composables/data-fetcher-list" },
+            { key: "3.1", label: "Data Fetcher Find", icon: "feature_search", to: "/composables/data-fetcher-find" },
+            { key: "3.2", label: "Delete Restore Dialog", icon: "delete", to: "/composables/delete-restore-dialog" },
+            { key: "3.3", label: "Dialog Update", icon: "edit_note", to: "/composables/dialog-update" },
+            { key: "3.4", label: "Dialog Create", icon: "add_circle", to: "/composables/dialog-create" },
         ]
     },
     {
-        key: "4", label: "Helpers", icon: "pi pi-fw pi-question-circle", to: null,
+        key: "4", label: "Helpers", icon: "help", to: null,
         items: [
-            { key: "4.0", label: "FormFactory", icon: "pi pi-fw pi-cogs", to: "/helpers/form-factory" },
-            { key: "4.1", label: "Filter", icon: "pi pi-fw pi-filter", to: "/helpers/filter" },
-            { key: "4.2", label: "handleSuccessToast", icon: "pi pi-fw pi-check-circle", to: "/helpers/handle-success-toast" },
-            { key: "4.3", label: "getRouteVariation", icon: "pi pi-fw pi-route", to: "/helpers/get-route-variation" },
-            { key: "4.4", label: "parseDate", icon: "pi pi-fw pi-calendar", to: "/helpers/parse-date" },
-            { key: "4.5", label: "Can", icon: "pi pi-fw pi-key", to: "/helpers/can" },
-            { key: "4.6", label: "authMiddleware", icon: "pi pi-fw pi-user-check", to: "/helpers/auth-middleware" },
-            { key: "4.7", label: "ExportCSV", icon: "pi pi-fw pi-upload", to: "/helpers/export-csv" },
-            { key: "4.8", label: "ParseFile", icon: "pi pi-fw pi-download", to: "/helpers/parse-file" },
+            { key: "4.0", label: "FormFactory", icon: "factory", to: "/helpers/form-factory" },
+            // { key: "4.1", label: "Filter", icon: "filter_alt", to: "/helpers/filter" },
+            { key: "4.2", label: "handleSuccessToast", icon: "done_all", to: "/helpers/handle-success-toast" },
+            { key: "4.3", label: "getRouteVariation", icon: "route", to: "/helpers/get-route-variation" },
+            { key: "4.4", label: "parseDate", icon: "calendar_month", to: "/helpers/parse-date" },
+            { key: "4.5", label: "Can", icon: "passkey", to: "/helpers/can" },
+            { key: "4.6", label: "authMiddleware", icon: "verified_user", to: "/helpers/auth-middleware" },
+            { key: "4.7", label: "ExportCSV", icon: "download", to: "/helpers/export-csv" },
+            { key: "4.8", label: "ParseFile", icon: "edit", to: "/helpers/parse-file" },
         ]
     },
-    { key: "5", label: "Contribution", icon: "pi pi-fw pi-external-link", to: "/contribution" },
+    { key: "5", label: "Contribution", icon: "link", to: "/contribution" },
 ]

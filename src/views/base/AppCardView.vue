@@ -1,31 +1,33 @@
 <template>
     <DocComponent title="App Card Component" header="AppCard"
-        description="The AppNav component represents the top navigation bar of the application. It contains the logo, breadcrumbs, and various utility buttons like language toggle and user profile."
+        description="The AppCard component is designed to display specific data in a visually appealing format. It utilizes slots to
+         place database information within these cards, already encapsulated with style for ready use. Each card can be updated or
+          deleted directly, with event handling managed through prop functions."
         :componentDocs="docs" />
 </template>
 
 <script>
-import ImportDoc from '@/doc/applayout/ImportDoc.vue';
-import FeaturesDoc from '@/doc/applayout/FeaturesDoc.vue';
-import CustomizationDoc from '@/doc/applayout/CustomizationDoc.vue';
+import DeleteRestoreHandler from '@/doc/appCard/DeleteRestoreHandler.vue';
+import UpdateFormHandling from '@/doc/appCard/UpdateFormHandling.vue';
+import Slots from '@/doc/appCard/Slots.vue';
 export default {
     data() {
         return {
             docs: [
                 {
-                    id: 'import',
-                    label: 'Import',
-                    component: ImportDoc
+                    id: 'DeleteRestoreHandler',
+                    label: 'Handling DeleteRestore',
+                    component: DeleteRestoreHandler
                 },
                 {
-                    id: 'features',
-                    label: 'Features',
-                    component: FeaturesDoc
+                    id: 'UpdateFormHandling',
+                    label: 'UpdateForm PopUp',
+                    component: UpdateFormHandling
                 },
                 {
-                    id: 'customization',
-                    label: 'Customization',
-                    component: CustomizationDoc
+                    id: 'Slots',
+                    label: 'AppCard Slots',
+                    component: Slots
                 },
             ],
         };

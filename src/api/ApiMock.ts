@@ -139,16 +139,14 @@ export const roleUpdateResponse: RoleUpdateResponse = {
 export const roleFindRequest: RoleFindRequest = {
     roleId: 1,
 
-
-
 };
 export const roleFindResponse: RoleFindResponse = {
     roleName: "Sales Manager",
-    roleDescription: "sales manager role .. ",
+    roleDescription: "sales manager role manages everything related to sales",
     permissions: [1, 2, 3, 4, 5],
     roleId: 1,
-    roleUsers: 0,
-    rolePermissions: 5
+    roleUsers: 4,
+    rolePermissions: 12
 };
 
 

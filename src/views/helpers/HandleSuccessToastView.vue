@@ -1,18 +1,24 @@
 <template>
     <DocComponent title="Handle Success Toast" header="HandleSuccessToast"
-        description="The Handle Success Toast composable file is a powerful tool designed to streamline the process of confirming deletion 
-        processes in the application. This file is responsible for displaying a dynamic dialog that confirms the deletion of a selected row 
-        by popping up a confirmation dialog and handling the delete-restore action itself by invoking the feature deleteRestore api function." :componentDocs="docs"
+        description="The handleSuccessToast function is a utility function used to display a success toast message on the top corner of
+         the page after successful actions. It provides flexibility to customize the toast title and message through the handler 
+         parameter, and it utilizes the toast object to add the toast message. The function also supports translation of the toast title and message using the t function." :componentDocs="docs"
         :ptTabComponent="ptComponent" />
 </template>
 
 <script>
-import Usage from '@/doc/composables/DeleteRestoreDialog/Usage.vue';
+import Parameters from '@/doc/helpers/HandleSuccessToast/Parameters.vue';
+import Usage from '@/doc/helpers/HandleSuccessToast/Usage.vue';
 
 export default {
     data() {
         return {
             docs: [
+                {
+                    id: 'Parameters',
+                    label: 'Function Parameters',
+                    component: Parameters
+                },
                 {
                     id: 'Usage',
                     label: 'Usage',

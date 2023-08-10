@@ -1,22 +1,34 @@
 <template>
-    <DocComponent title="Dialog Update" header="Dialog Update"
-        description="The Dialog Update composable file is a powerful tool designed to streamline the process of confirming deletion 
-        processes in the application. This file is responsible for displaying a dynamic dialog that confirms the deletion of a selected row 
-        by popping up a confirmation dialog and handling the delete-restore action itself by invoking the feature deleteRestore api function." :componentDocs="docs"
+    <DocComponent title="authMiddleware" header="authMiddleware"
+        description="The authMiddleware function acts as a middleware for route authorization in the vuedashkit package. It checks if 
+        the user is authorized to access specific routes. If the user is unauthenticated, it redirects them to the login page. Additionally
+        , it checks if the user has permission to access the requested route; if not, it redirects them to the unauthorized page." :componentDocs="docs"
         :ptTabComponent="ptComponent" />
 </template>
 
 <script>
-import Usage from '@/doc/composables/DialogUpdate/Usage.vue';
+import Parameters from '@/doc/helpers/authMiddleware/Parameters.vue';
+import Usage from '@/doc/helpers/authMiddleware/Usage.vue';
+import FunctionDetails from '@/doc/helpers/authMiddleware/FunctionDetails.vue';
 
 export default {
     data() {
         return {
             docs: [
                 {
+                    id: 'Parameters',
+                    label: 'Function Parameters',
+                    component: Parameters
+                },
+                {
                     id: 'Usage',
                     label: 'Usage',
                     component: Usage
+                },
+                {
+                    id: 'FunctionDetails',
+                    label: 'Function Details',
+                    component: FunctionDetails
                 },
             ],
         };
